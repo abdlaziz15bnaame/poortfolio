@@ -1,41 +1,145 @@
-// components/PortfolioGallery.jsx
+// components/Portfolio.jsx
+import { motion } from "framer-motion";
 import Image from "next/image";
-import image_1 from "../../public/images/project-1.png";
-import image_2 from "../../public/images/project-2.png";
-import image_3 from "../../public/images/project-3.png";
-import image_4 from "../../public/images/project-4.png";
-import image_5 from "../../public/images/project-5.png";
-import image_6 from "../../public/images/project-6.png";
-export default function PortfolioGallery() {
-  const images = [image_1, image_2, image_3, image_4, image_5, image_6];
+import Link from "next/link";
+
+export default function Portfolio() {
+  const projects = [
+    {
+      image: "/images/ouigo-en.png",
+      url: "https://www.ouigo.com/fr-en",
+      title: "OUIGO",
+    },
+    {
+      image: "/images/barnes.png",
+      url: "https://www.barnes-international.com/",
+      title: "BARNES International",
+    },
+    {
+      image: "/images/junior.png",
+      url: "https://juniorcie.sncf-connect.com/",
+      title: "Junior SNCF",
+    },
+    {
+      image: "/images/barnes-lyon.png",
+      url: "https://www.barnes-lyon.com/",
+      title: "BARNES Lyon",
+    },
+    {
+      image: "/images/taalim.png",
+      url: "#",
+      title: "Taalim",
+    },
+    {
+      image: "/images/ortho.png",
+      url: "#",
+      title: "Orthozinith",
+    },
+  ];
 
   return (
-    <section id="portfolio" className="bg-[#f8fafc] py-20 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-          Our Work
-        </h2>
-        <p className="text-lg text-slate-700 max-w-3xl mx-auto">
-          A curated selection of landing pages crafted with precision and
-          passion.
-        </p>
+    <section
+      id="portfolio"
+      className="relative bg-[#0a192f] py-24 overflow-hidden"
+    >
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-5">
+        <motion.div
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-yellow-400/10 blur-3xl"
+        ></motion.div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {images.map((src, idx) => (
-          <div
-            key={idx}
-            className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition transform hover:scale-105"
+      <div className="container mx-auto px-6 z-10">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
+            My <span className="text-yellow-400">Work</span>
+          </h2>
+          <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </motion.div>
+
+        {/* Projects grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="relative group"
+            >
+              {/* Project image */}
+              <div className="relative overflow-hidden rounded-xl aspect-video border-2 border-gray-800 group-hover:border-yellow-400 transition-all duration-300">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition duration-500"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-[#0a192f] opacity-0 group-hover:opacity-90 transition duration-300 flex items-center justify-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-center p-6"
+                  >
+                    <h3 className="text-2xl font-bold text-yellow-400 mb-4">
+                      {project.title}
+                    </h3>
+                    <Link
+                      href={project.url}
+                      target="_blank"
+                      className="inline-block px-6 py-2 border-2 border-yellow-400 text-yellow-400 rounded-lg hover:bg-yellow-400 hover:text-[#0a192f] transition duration-300"
+                    >
+                      View Project
+                    </Link>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Floating title (visible on mobile) */}
+              <div className="mt-4 md:hidden">
+                <h3 className="text-xl font-bold text-gray-100">
+                  {project.title}
+                </h3>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View more button */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mt-16 relative z-30"
+        >
+          <Link
+            href="#contact"
+            className="inline-block px-8 py-3 bg-yellow-400 text-[#0a192f] font-bold rounded-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105 shadow-lg shadow-yellow-400/20"
           >
-            <Image
-              src={src}
-              alt={`Portfolio sample ${idx + 1}`}
-              className="w-full h-56 object-cover"
-              loading="lazy"
-              draggable={false}
-            />
-          </div>
-        ))}
+            Want Similar Results?
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
