@@ -71,7 +71,7 @@ export default function About() {
             <div className="space-y-4 mb-8">
               <p>
                 I'm a passionate developer with{" "}
-                <span className="text-yellow-400">4+ years</span> of experience
+                <span className="text-yellow-400">1+ years</span> of experience
                 creating high-performance applications. My expertise spans
                 across the entire development stack, from crafting beautiful UIs
                 to building robust backend systems.

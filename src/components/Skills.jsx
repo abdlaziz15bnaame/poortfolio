@@ -22,7 +22,7 @@ export default function Skills() {
     {
       title: "Front-End",
       icon: <FaReact className="text-4xl text-blue-400" />,
-      skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+      skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS" ],
       color: "from-blue-500 to-blue-700",
     },
     {
@@ -60,7 +60,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative bg-[#0a192f] py-24 overflow-hidden"
+      className="relative bg-[#2356a3] py-24 overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">

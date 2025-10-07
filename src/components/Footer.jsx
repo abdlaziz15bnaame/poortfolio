@@ -62,7 +62,7 @@ export default function Footer() {
             className="flex space-x-6 mb-8"
           >
             <motion.a
-              href="https://wa.me/+212770502436"
+              href="https://wa.me/+212622691330"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -3, scale: 1.1 }}
@@ -71,7 +71,7 @@ export default function Footer() {
               <FaWhatsapp className="text-2xl" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/mohamed-zrigou"
+              href="https://www.linkedin.com/in/abdelaziz-benaame-4496ab35b/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -3, scale: 1.1 }}

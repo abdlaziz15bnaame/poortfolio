@@ -13,10 +13,10 @@ export default function Home() {
     <div className="relative">
       <Header/>
       <Hero />
-     <About/>
-     <Skills/>
-     <Portfolio/>
-     <Contact/>
+      <About/>
+      <Skills/>
+      <Portfolio/>
+      <Contact/>
       <Footer />
     </div>
   );

@@ -12,7 +12,7 @@ export default function Header() {
     const cvUrl = "/cv.pdf"; 
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = "Zrigou_CV.pdf"; 
+    link.download = "Abdelaziz_CV.pdf"; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -6,35 +6,37 @@ import Link from "next/link";
 export default function Portfolio() {
   const projects = [
     {
-      image: "/images/ouigo-en.png",
-      url: "https://www.ouigo.com/fr-en",
-      title: "OUIGO",
+      image: "/images/project-1.png",
+      url: "https://e-book-dusky.vercel.app",
+      title: " E-Book Store",
     },
     {
-      image: "/images/barnes.png",
-      url: "https://www.barnes-international.com/",
-      title: "BARNES International",
+      image: "/images/project-2.png",
+      url: "https://proje-de-cofe.vercel.app/",
+      title: " Coffee Shop",
     },
     {
-      image: "/images/junior.png",
-      url: "https://juniorcie.sncf-connect.com/",
-      title: "Junior SNCF",
+      image: "/images/project-3.png",
+      url: " https://website-restaurante-three.vercel.app/",
+      title: " Restaurant Website",
     },
     {
-      image: "/images/barnes-lyon.png",
-      url: "https://www.barnes-lyon.com/",
-      title: "BARNES Lyon",
+      image: "/images/project-4.png",
+      url: " https://design-studio-black.vercel.app/",
+      title: "design-studio",
     },
     {
-      image: "/images/taalim.png",
-      url: "#",
-      title: "Taalim",
+      image: "/images/project-5.png",
+      url: " https://product-catalog-peach.vercel.app/ ",
+      title: " Product Catalog",
     },
     {
-      image: "/images/ortho.png",
-      url: "#",
-      title: "Orthozinith",
+      image: "/images/project-6.png",
+      url: "https://e-book-dusky.vercel.app/",
+      title: "My recepis",
     },
+    
+    
   ];
 
   return (
