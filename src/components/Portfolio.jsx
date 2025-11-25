@@ -23,7 +23,7 @@ export default function Portfolio() {
     {
       image: "/images/project-4.png",
       url: " https://design-studio-black.vercel.app/",
-      title: "design-studio",
+      title: "Design-Studio",
     },
     {
       image: "/images/project-5.png",
@@ -32,8 +32,18 @@ export default function Portfolio() {
     },
     {
       image: "/images/project-6.png",
-      url: "https://e-book-dusky.vercel.app/",
+      url: "https://sfxhpnlx-3000.uks1.devtunnels.ms/",
       title: "My recepis",
+    },
+    {
+      image: "/images/project-7.png",
+      url: "https://sfxhpnlx-3000.uks1.devtunnels.ms/",
+      title: "Foodapp",
+    },
+    {
+      image: "/images/project-8.png",
+      url: "https://deluxe-basket.vercel.app/",
+      title: "Deluxe-Basket",
     },
     
     
