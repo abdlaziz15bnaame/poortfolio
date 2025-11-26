@@ -11,15 +11,16 @@ export default function Portfolio() {
       title: " E-Book Store",
     },
     {
+      image: "/images/project-8.png",
+      url: "https://deluxe-basket.vercel.app/",
+      title: "Deluxe-Basket",
+    },
+    {
       image: "/images/project-2.png",
       url: "https://proje-de-cofe.vercel.app/",
       title: " Coffee Shop",
     },
-    {
-      image: "/images/project-3.png",
-      url: " https://website-restaurante-three.vercel.app/",
-      title: " Restaurant Website",
-    },
+    
     {
       image: "/images/project-4.png",
       url: " https://design-studio-black.vercel.app/",
@@ -40,13 +41,11 @@ export default function Portfolio() {
       url: "https://sfxhpnlx-3000.uks1.devtunnels.ms/",
       title: "Foodapp",
     },
-    {
-      image: "/images/project-8.png",
-      url: "https://deluxe-basket.vercel.app/",
-      title: "Deluxe-Basket",
+{
+      image: "/images/project-3.png",
+      url: " https://website-restaurante-three.vercel.app/",
+      title: " Restaurant Website",
     },
-    
-    
   ];
 
   return (
